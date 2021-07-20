@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="AccessUnitSynthesisMapping.cs" />
     <Compile Include="CustomUnitSynthesisPatcher.cs" />
+    <Compile Include="ExampleTestUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
