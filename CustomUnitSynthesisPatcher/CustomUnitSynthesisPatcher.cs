@@ -31,6 +31,12 @@ namespace CustomUnitSynthesisPatcher
         public void Initialize()
         {
             Logger.LogInfo($"{NAME} initialization began.");
+
+            ExampleTestUnit.Make();
+
+            AccessUnitSynthesisMapping.FindUnitSynthesisMappingInstanceToStub();
+
+            Logger.LogInfo($"{NAME} finished initialization.");
         }
 
         public static void Log(string message)
