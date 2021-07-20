@@ -7,7 +7,7 @@ namespace CustomUnitSynthesisPatcher
 {
     class AccessUnitSynthesisMapping
     {
-        public void FindUnitSynthesisMappingInstanceToStub()
+        public static void FindUnitSynthesisMappingInstanceToStub()
         {
             // Possibly gets a reference to AllGameData
             AllGameData testData = ProviderManager.SaveManager.GetAllGameData();
