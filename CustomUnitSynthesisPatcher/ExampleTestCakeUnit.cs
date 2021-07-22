@@ -79,14 +79,17 @@ namespace CustomUnitSynthesisPatcher
                     }
             }.BuildAndRegister();
 
+            //FastFood.BuildAndRegister();
+
             CustomUnitSynthesisPatcher.Log($"Created card: {FastFood.GetName()}."); // EDIT
 
 
             new CardUpgradeDataBuilder()
             {
-                upgradeTitle = "Sweetkin_Essence_XXXIV",
-                SourceSynthesisUnit = fastfoodcharacter,
-                UpgradeDescription = "Mon_XIV",
+                UpgradeTitleKey = "Sweetkin_Essence_XXXIV_UpgradeTitleKey",
+                UpgradeTitle = "Sweetkin_Essence_XXXIV", // NOT CAPITALIZED, needed to set UpgradeTitleKey, UpgradeDescriptionKey, and UpgradgeNotificationKey
+                SourceSynthesisUnit = CustomCharacterManager.GetCharacterDataByID("Sweetkin_Unit_FastFood"),
+                UpgradeDescription = "Sweetkin synthesis description words.",
                 UpgradeDescriptionKey = "Mon_XIV",
 
                 StatusEffectUpgrades = new List<StatusEffectStackData>
