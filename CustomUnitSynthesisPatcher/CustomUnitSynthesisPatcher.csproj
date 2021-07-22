@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\..\..\..\..\..\Program Files %28x86%29\SteamLibrary\steamapps\workshop\content\1102190\CustomUnitSynthesisPatcher\plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="AccessUnitSynthesisMapping.cs" />
     <Compile Include="CustomUnitSynthesisPatcher.cs" />
+    <Compile Include="ExampleTestCakeUnit.cs" />
     <Compile Include="ExampleTestUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
