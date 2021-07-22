@@ -70,6 +70,7 @@ namespace CustomUnitSynthesisPatcher
             // Contains all information for what this unit's synthesis upgrade will do
             CardUpgradeDataBuilder testUnitSynthesis = new CardUpgradeDataBuilder
             {
+                UpgradeTitleKey = "TestUnit_Synthesis_UpgradeTitleKey", // NECESSARY TO PREVENT TRAINWORKS FROM SETTING THE SAME DEFAULT VALUE TO ALL YOUR UPGRADES AND HAVING THEM OVERWRITE EACH OTHER
                 UpgradeTitle = "synthesis_" + charId,
                 SourceSynthesisUnit = CustomCharacterManager.GetCharacterDataByID(charId),
                 UpgradeDescription = "TEST UNIT SYNTHESIS UPGRADE.",
