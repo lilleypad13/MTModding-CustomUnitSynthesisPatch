@@ -33,6 +33,7 @@ namespace CustomUnitSynthesisPatcher
             Logger.LogInfo($"{NAME} initialization began.");
 
             ExampleTestUnit.Make();
+            ExampleTestCakeUnit.BuildFastFoodCharacter();
 
             AccessUnitSynthesisMapping.FindUnitSynthesisMappingInstanceToStub();
 
