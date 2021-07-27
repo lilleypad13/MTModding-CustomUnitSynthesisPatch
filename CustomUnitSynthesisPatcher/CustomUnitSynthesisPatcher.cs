@@ -32,9 +32,11 @@ namespace CustomUnitSynthesisPatcher
         {
             Logger.LogInfo($"{NAME} initialization began.");
 
+            // Make sure to add CharacterData and CardUpgradeData BEFORE calling CollectMappingData
             ExampleTestUnit.Make();
             ExampleTestCakeUnit.BuildFastFoodCharacter();
 
+            // Calls Monster Train's CollectMappingData method located in UnitSynthesisMapping
             AccessUnitSynthesisMapping.FindUnitSynthesisMappingInstanceToStub();
 
             Logger.LogInfo($"{NAME} finished initialization.");

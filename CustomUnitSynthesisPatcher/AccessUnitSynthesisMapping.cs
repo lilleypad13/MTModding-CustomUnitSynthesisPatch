@@ -9,7 +9,7 @@ namespace CustomUnitSynthesisPatcher
     {
         public static void FindUnitSynthesisMappingInstanceToStub()
         {
-            // Possibly gets a reference to AllGameData
+            // Gets a reference to AllGameData with Trainworks
             AllGameData testData = ProviderManager.SaveManager.GetAllGameData();
             CustomUnitSynthesisPatcher.Log("Got reference to AllGameData: " + testData.name);
 
@@ -21,19 +21,20 @@ namespace CustomUnitSynthesisPatcher
             UnitSynthesisMapping mappingInstance = balanceData.SynthesisMapping;
             if (mappingInstance == null)
             {
-                CustomUnitSynthesisPatcher.Log("Failed to create a mapping instance.");
+                CustomUnitSynthesisPatcher.Log("Failed to find a mapping instance.");
             }
             else
             {
                 CustomUnitSynthesisPatcher.Log("Able to find mapping instance: " + mappingInstance.GetID()); // Test to see if this is a different instance
             }
 
-            // Find a way to set the allGameData property of a created UnitSynthesisMapping instance
+            // Calls CollectMappingData method
             RecallingCollectMappingData.MyTest(mappingInstance);
-            CustomUnitSynthesisPatcher.Log("Ran through full test of mapping synths.");
+            CustomUnitSynthesisPatcher.Log("Called CollectMappingData.");
         }
     }
 
+    // Solely exists to allow calling of private method CollectMappingData from within a UnitSynthesisMapping instance
     [HarmonyPatch(typeof(UnitSynthesisMapping), "CollectMappingData", new Type[] { })]
     public class RecallingCollectMappingData
     {
